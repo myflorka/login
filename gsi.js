@@ -51,7 +51,7 @@ function responsePostFunction(response) {
     if (response.status === 200 && response.data) {
         console.log(response.data);
         setCookieWithExpireHour('login',response.data.token,18);
-        redirect("/dashboard");
+        redirect("/");
     } else {
         console.error("Login failed:", response.data?.message || "Unknown error");
         Swal.fire({
